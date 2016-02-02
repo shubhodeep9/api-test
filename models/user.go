@@ -31,7 +31,9 @@ type Profile struct {
 }
 
 func AddUser(u User) string {
-	u.Id = "user_" + strconv.FormatInt(time.Now().UnixNano(), 10)
+	if u.Id == "" {
+		u.Id = "user_" + strconv.FormatInt(time.Now().UnixNano(), 10)
+	}
 	UserList[u.Id] = &u
 	return u.Id
 }

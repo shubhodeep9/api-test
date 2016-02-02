@@ -23,7 +23,9 @@ func init() {
 }
 
 func AddOne(object Object) (ObjectId string) {
-	object.ObjectId = "astaxie" + strconv.FormatInt(time.Now().UnixNano(), 10)
+	if object.ObjectId == "" {
+		object.ObjectId = "astaxie" + strconv.FormatInt(time.Now().UnixNano(), 10)
+	}
 	Objects[object.ObjectId] = &object
 	return object.ObjectId
 }
