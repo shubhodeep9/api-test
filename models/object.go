@@ -16,6 +16,8 @@ type Object struct {
 	PlayerName string
 }
 
+
+
 func init() {
 	Objects = make(map[string]*Object)
 	Objects["hjkhsbnmn123"] = &Object{"hjkhsbnmn123", 100, "astaxie"}

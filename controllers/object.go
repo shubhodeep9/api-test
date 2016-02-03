@@ -3,8 +3,9 @@ package controllers
 import (
 	"api-test/models"
 	"encoding/json"
-
+	"github.com/astaxie/beego/httplib"
 	"github.com/astaxie/beego"
+	"crypto/tls"
 )
 
 // Operations about object
@@ -51,8 +52,15 @@ func (o *ObjectController) Get() {
 // @Failure 403 :objectId is empty
 // @router / [get]
 func (o *ObjectController) GetAll() {
-	obs := models.GetAll()
-	o.Data["json"] = obs
+	var maps models.Maps
+	req := httplib.Get("https://maps.googleapis.com/maps/api/directions/json?origin=Lucknow&destination=Varanasi&key=AIzaSyDVYEzlC_MuzKNDIwWzipvny3dkf4nSBVo")
+	req.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
+	err := req.ToJSON(&maps)
+	if err == nil{
+	o.Data["json"] = maps
+	}else{
+	o.Data["json"] = err
+}
 	o.ServeJSON()
 }
 
