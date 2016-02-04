@@ -46,12 +46,12 @@ func (o *ObjectController) Get() {
 	o.ServeJSON()
 }
 
-// @Title GetAll
-// @Description get all objects
-// @Success 200 {object} models.Object
-// @Failure 403 :objectId is empty
-// @router / [get]
-func (o *ObjectController) GetAll() {
+// @Title GMaps
+// @Description gets GMaps API
+// @Success 200 Maps retrieved
+// @Failure 403 Connection or Proxy error
+// @router /gmaps [post]
+func (o *ObjectController) GMaps() {
 	var maps models.Maps
 	req := httplib.Get("https://maps.googleapis.com/maps/api/directions/json?origin=Lucknow&destination=Varanasi&key=AIzaSyDVYEzlC_MuzKNDIwWzipvny3dkf4nSBVo")
 	req.SetTLSClientConfig(&tls.Config{InsecureSkipVerify: true})
@@ -61,6 +61,17 @@ func (o *ObjectController) GetAll() {
 	}else{
 	o.Data["json"] = err
 }
+o.ServeJSON()
+}
+
+// @Title GetAll
+// @Description get all objects
+// @Success 200 {object} models.Object
+// @Failure 403 :objectId is empty
+// @router / [get]
+func (o *ObjectController) GetAll() {
+	ob := models.GetAll()
+	o.Data["json"] = ob
 	o.ServeJSON()
 }
 

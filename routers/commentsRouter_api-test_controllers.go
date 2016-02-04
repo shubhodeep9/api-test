@@ -22,6 +22,13 @@ func init() {
 
 	beego.GlobalControllerRouter["api-test/controllers:ObjectController"] = append(beego.GlobalControllerRouter["api-test/controllers:ObjectController"],
 		beego.ControllerComments{
+			"GMaps",
+			`/gmaps`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["api-test/controllers:ObjectController"] = append(beego.GlobalControllerRouter["api-test/controllers:ObjectController"],
+		beego.ControllerComments{
 			"GetAll",
 			`/`,
 			[]string{"get"},
