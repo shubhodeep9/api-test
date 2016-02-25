@@ -50,7 +50,7 @@ func (o *ObjectController) Get() {
 // @Description gets GMaps API
 // @Success 200 Maps retrieved
 // @Failure 403 Connection or Proxy error
-// @router /gmaps [post]
+// @router /gmaps [get]
 func (o *ObjectController) GMaps() {
 	var maps models.Maps
 	req := httplib.Get("https://maps.googleapis.com/maps/api/directions/json?origin=Lucknow&destination=Varanasi&key=AIzaSyDVYEzlC_MuzKNDIwWzipvny3dkf4nSBVo")

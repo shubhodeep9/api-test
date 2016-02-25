@@ -24,7 +24,7 @@ func init() {
 		beego.ControllerComments{
 			"GMaps",
 			`/gmaps`,
-			[]string{"post"},
+			[]string{"get"},
 			nil})
 
 	beego.GlobalControllerRouter["api-test/controllers:ObjectController"] = append(beego.GlobalControllerRouter["api-test/controllers:ObjectController"],

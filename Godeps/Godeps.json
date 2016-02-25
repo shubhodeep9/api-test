@@ -1,0 +1,61 @@
+{
+	"ImportPath": "api-test",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/astaxie/beego",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/config",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/context",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/grace",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/httplib",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/logs",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/plugins/auth",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/session",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/swagger",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/toolbox",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		},
+		{
+			"ImportPath": "github.com/astaxie/beego/utils",
+			"Comment": "v1.6.0-7-g23bb36d",
+			"Rev": "23bb36d35cf83ca8b95c4432aa846326530d24b9"
+		}
+	]
+}
